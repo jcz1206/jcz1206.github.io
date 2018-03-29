@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<meta name="viewport"  content="width=device-width,user-scalable=no">
+	<meta name="copyright" content="">
+	<meta name="Keywords" content="">
+	<meta name="description" content="">
+	<title>报价</title>
+</head>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/newstyle.css">
+<body>
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/TouchSlide.1.1.js"></script>
+    <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/vue.js"></script>
+    <script type="text/javascript" src="js/vue-router.js"></script>
+  <div id="app">
+    <!-- 路由出口 -->
+    <!-- 路由匹配到的组件将渲染在这里 -->
+    <router-view></router-view>
+    <!-- 使用 router-link 组件来导航. -->
+    <!-- 通过传入 `to` 属性指定链接. -->
+    <!-- <router-link> 默认会被渲染成一个 `<a>` 标签 -->
+        <footer>
+            <ul class="footer">
+                <li><router-link to="/foo">首页</router-link></li>
+                <li><router-link to="/foo">投票</router-link></li>
+                <li><router-link to="/bar">排行</router-link></li>
+                <li><router-link to="/bar">活动</router-link></li>
+            </ul>
+        </footer>
+    </div>
+    <script>
+    </script>
+    <script type="text/x-template" id="indexPage" src="js/indexPage.js">
+        <div>
+            <div class="offer">
+            <img src="images/banner.jpg" alt="">
+            </div>
+            <p>
+                “xxxxxx”大赛
+            </p>
+            <p>
+                2017年12月-2018年06月
+            </p>
+            <div>
+                <p>活动进程</p>
+                <div>
+                    <div><span>报名</span>在线投稿</div>&gt;
+                    <div><span>初赛</span>网络投票</div>&gt;
+                    <div><span>决赛</span>现场评奖</div>
+                </div>
+                <p>我要报名</p>
+            </div>
+            <div>
+                <p>
+                    在线投票
+                    <b>注：文明投票文明投票文明投票文明投票文明投票文明投票文明投票文明投票文明投票文明投票文明投票文明投票文明投票文明投票文明投票文明投票文明投票文明投票文明投票文明投票</b>
+                </p>
+                <div>
+                    <p>当前投票剩余时间</p>
+                    <dl class="flexbox">
+                        <dt class="dt" v-for="(item,index) in ttype"><i v-if="index>0">&gt;</i><span v-on:click="changeDetail(item.id)">{{item.title}}</span></dt>
+                    </dl>
+                    <div class="flexbox">
+                        <div v-for="item in t" class="showli" :key="item.index">
+                                <img :src="item.image">
+                                <p>编号:{{item.index}} <span>作者:{{item.author}}</span></p>
+                                <p>作品名称{{item.name}}</p>
+                                <p>{{item.num}}票<span>已结束</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+    <script type="text/javascript" src="js/vue-common.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+.flexbox{
+  display:flex;
+  flex-wrap:wrap;
+}
+
+.showli{margin: 2%;
+  overflow: auto;
+  width: 46%;
+}
+.showli img{
+  
+}
+.dt span{
+  display: inline-block;
+  padding: 3px 10px;
+  background-color: #1dc91d;
+  color: white;
+  border-radius: 16px;
+}
+.footer li{
+  width:25%;
+}
